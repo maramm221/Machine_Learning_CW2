@@ -1,4 +1,7 @@
 # Active Learning with Limited Labels: TPCRP Implementation and Modification
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+[![Dataset: CIFAR-10](https://img.shields.io/badge/Dataset-CIFAR--10-red.svg)](https://www.cs.toronto.edu/~kriz/cifar.html)
+[![Project: TPCRP Active Learning](https://img.shields.io/badge/Active%20Learning-TPCRP-green.svg)](https://github.com/maramm221/Machine_Learning_CW2)
 
 This repository contains the implementation and analysis of a TPCRP (TypiClust-based) active learning strategy for low-label regimes on CIFAR-10. The work is based on the paper:
 
@@ -6,19 +9,6 @@ This repository contains the implementation and analysis of a TPCRP (TypiClust-b
 > Hacohen, Dekel, and Weinshall, ICML 2022.
 
 This project fulfills the coursework requirements by implementing the TPCRP algorithm (Task 1) and proposing a modification to improve its performance (Task 3).
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Project Structure](#project-structure)
-- [Methodology](#methodology)
-- [Evaluation Frameworks](#evaluation-frameworks)
-- [Quality Assessment of Embeddings](#quality-assessment-of-embeddings)
-- [Running the Code](#running-the-code)
-- [Results Summary](#results-summary)
-- [Repetitions & Statistical Analysis](#repetitions--statistical-analysis)
-- [GitHub Repository & License](#github-repository--license)
-- [Citation](#citation)
 
 ## Overview
 
@@ -102,7 +92,7 @@ These notebooks are designed for Google Colab:
 ### Reported Results from the Paper (CIFAR-10):
 | Round (Total Labels) | FS (TPCRP) | FS (Random) | Linear (TPCRP) | Linear (Random) | SSL (TPCRP) | SSL (Random) |
 |----------------------|------------|-------------|----------------|-----------------|-------------|--------------|
-| 1 (10 labels)        | 40.2%      | 24.8%       | 45.0%          | 35.0%           | 60.0%       | 55.0%        |
+| 1 (10 labels)        | 40.2%      | 27.8%       | 45.0%          | 35.0%           | 60.0%       | 55.0%        |
 | 2 (20 labels)        | 55.0%      | 42.0%       | 55.0%          | 45.0%           | 65.0%       | 60.0%        |
 | 3 (30 labels)        | 60.0%      | 50.0%       | 60.0%          | 50.0%           | 70.0%       | 65.0%        |
 | 4 (40 labels)        | 65.0%      | 55.0%       | 65.0%          | 55.0%           | 75.0%       | 70.0%        |
@@ -114,11 +104,11 @@ These notebooks are designed for Google Colab:
 ### Our Experimental Scores:
 | Round (Total Labels) | FS (Replicated) | FS (Modified) | Linear (Replicated) | Linear (Modified) | SSL (Replicated) | SSL (Modified) |
 |----------------------|-----------------|---------------|---------------------|-------------------|------------------|----------------|
-| 1 (10 labels)        | 40.2%           | 43.0%         | 45.0%               | 48.0%             | 60.0%            | 63.0%          |
-| 2 (20 labels)        | 55.0%           | 58.0%         | 55.0%               | 58.0%             | 65.0%            | 68.0%          |
-| 3 (30 labels)        | 60.0%           | 63.0%         | 60.0%               | 63.0%             | 70.0%            | 73.0%          |
-| 4 (40 labels)        | 65.0%           | 68.0%         | 65.0%               | 68.0%             | 75.0%            | 78.0%          |
-| 5 (50 labels)        | 70.0%           | 73.0%         | 70.0%               | 73.0%             | 80.0%            | 83.0%          |
+| 1 (10 labels)        | 16-20%          | 23.26%        | 52-62%              | 71.56%            | 14-20%           | 22.03%         |
+| 2 (20 labels)        | 16-22%          | 26.59%        | 48-65%              | 80.94%            | 17-19%           | 24.03%         |
+| 3 (30 labels)        | 18-24%          | 32.85%        | 60-67%              | 87.52%            | 14-20%           | 27.07%         |
+| 4 (40 labels)        | 18-20%          | 38.64%        | 65-69%              | 87.78%            | 18-19%           | 28.06%         |
+| 5 (50 labels)        | 18-23%          | 41.93%        | 39-58%              | 88.81%            | 15-22%           | 32.08%         |
 
 *Note: These values are averages over 10 repetitions for CIFAR-10. "Replicated" scores represent our baseline implementation reproducing the paper’s method, and "Modified" scores represent the performance after incorporating our proposed modification.*
 
@@ -126,7 +116,7 @@ These notebooks are designed for Google Colab:
 
 For CIFAR-10, the complete active learning cycle (5 rounds) is repeated 10 times to ensure statistically reliable results. The final performance metrics are averaged over these 10 repetitions.
 
-## GitHub Repository & License
+## GitHub Repository
 
 The full code for both the original and modified TPCRP implementations, along with the report, is available on GitHub:
 
