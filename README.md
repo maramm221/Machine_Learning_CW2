@@ -1,5 +1,4 @@
 # Active Learning with Limited Labels: TPCRP Implementation and Modification
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1wzHufnhzDB9wm2sNOph7IlJGZfS1W1dn#scrollTo=ifaG5tFBbl_H)
 [![Dataset: CIFAR-10](https://img.shields.io/badge/Dataset-CIFAR--10-red.svg)](https://www.cs.toronto.edu/~kriz/cifar.html)
 [![Project: TPCRP Active Learning](https://img.shields.io/badge/Active%20Learning-TPCRP-green.svg)](https://github.com/maramm221/Machine_Learning_CW2)
 
