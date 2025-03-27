@@ -91,13 +91,14 @@ These notebooks are designed for Google Colab:
 ### Reported Results from the Paper (CIFAR-10):
 | Round (Total Labels) | FS (TPCRP) | FS (Random) | Linear (TPCRP) | Linear (Random) | SSL (TPCRP) | SSL (Random) |
 |----------------------|------------|-------------|----------------|-----------------|-------------|--------------|
-| 1 (10 labels)        | 40.2%      | 27.8%       | 45.0%          | 35.0%           | 60.0%       | 55.0%        |
-| 2 (20 labels)        | 55.0%      | 42.0%       | 55.0%          | 45.0%           | 65.0%       | 60.0%        |
-| 3 (30 labels)        | 60.0%      | 50.0%       | 60.0%          | 50.0%           | 70.0%       | 65.0%        |
-| 4 (40 labels)        | 65.0%      | 55.0%       | 65.0%          | 55.0%           | 75.0%       | 70.0%        |
-| 5 (50 labels)        | 70.0%      | 60.0%       | 70.0%          | 60.0%           | 80.0%       | 75.0%        |
+| 1 (10 labels)        | 40.2%      | 27.8%       | 45.0%          | 35.0%           | -           | -            |
+| 2 (20 labels)        | 55.0%      | 42.0%       | 55.0%          | 45.0%           | -           | -            |
+| 3 (30 labels)        | 60.0%      | 50.0%       | 60.0%          | 50.0%           | -           | -            |
+| 4 (40 labels)        | 65.0%      | 55.0%       | 65.0%          | 55.0%           | -           | -            |
+| 5 (50 labels)        | 70.0%      | 60.0%       | 70.0%          | 60.0%           | -           | -            |
 
-*Note: For CIFAR-10, the active learning process (5 rounds) is repeated 10 times and the values shown are the average accuracies over these repetitions.*
+**Note:** For SSL, the paper reports only one result (not per round):  
+**FlexMatch SSL with 10 labels**: 93.2% (TPCRP) vs. 53.8% (Random).
 
 
 ### Our Experimental Scores:
